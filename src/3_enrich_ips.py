@@ -422,7 +422,7 @@ if __name__ == "__main__":
 
     if not ABUSEIPDB_API_KEY or not VIRUSTOTAL_API_KEY:
         raise ValueError(
-            "Please set your API Keys in yout .env file"
+            "Please set your API Keys in your .env file"
         )
     # Initialize checker
     checker = IPReputationChecker(
@@ -437,4 +437,5 @@ if __name__ == "__main__":
     # Generate and save report
     checker.generate_report(analysis_results, output_file=output_path)
     
+
     print("✅ Analysis complete!")
