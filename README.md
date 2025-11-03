@@ -44,7 +44,7 @@ The pipeline is controlled by `main.py`, which executes the following scripts in
 
 1.  **`src/1_collect_whm_data.py` (Data Collection)**
 
-      * **Input**: A raw HTML fragment (e.g., `<tbody tabindex="0" class="yui-dt-data" style> ... </tbody>`) from file saved from the WHM "Email Delivery Reports" screen (e.g., `data/00_raw/whm_logs/YY-MM-DD_domain-account.html`).
+      * **Input**: A raw HTML fragment (e.g., `<tbody tabindex="0" class="yui-dt-data" style> ... </tbody>`) file saved from the WHM "Email Delivery Reports" screen (e.g., `data/00_raw/whm_logs/YY-MM-DD_domain-account.html`).
       * **Process**: Parses the HTML to extract critical data: event, sender, recipient, source IP, date/time, and result message. Applies spam detection logic.
       * **Output**: A JSON file (e.g., `data/01_processed/whm_extracted/YY-MM-DD_whm_domain-account.json`).
 
@@ -148,4 +148,5 @@ With the project configured, usage is simplified to a single command:
 3.  **Access the Report**: The pipeline will run, and if everything is successful, you will find the final report in CSV format in the `reports/` folder (e.g., `reports/25-10-30_report_example-account.csv`).
 
 All progress will be displayed in the console and saved to `pipeline.log`.
+
 
